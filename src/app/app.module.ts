@@ -8,7 +8,7 @@ import {ListaCursoComponent} from './ListaCurso/listaCurso.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ClienteService } from './cliente/cliente.service';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   { path: '', redirectTo: '/clientes', pathMatch: 'full'},
@@ -26,6 +26,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
