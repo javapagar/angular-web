@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'cursos', component: ListaCursoComponent },
   { path: 'clientes', component: ClienteComponent },
   { path: 'clientes/form', component: FormClienteComponent },
-
+  { path: 'clientes/form/:id', component: FormClienteComponent },
 ];
 
 @NgModule({

@@ -22,7 +22,11 @@ export class ClienteService{
         );
     }
 
-    create(cliente : Cliente) : Observable<Cliente>{
+    save(cliente : Cliente) : Observable<Cliente>{
         return this.httpClient.post<Cliente>(this.urlEndpoint, cliente, { headers: this.httpHeaders})
+    }
+
+    cargar (id : Number) : Observable<Cliente>{
+        return this.httpClient.get<Cliente>(`${this.urlEndpoint}/${id}`);
     }
 }
